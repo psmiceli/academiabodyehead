@@ -1,0 +1,326 @@
+/*CONFIGURAÇÕES INICIAIS */
+
+/*Importar Fontes, fontes importadas do Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Righteous&family=Roboto&family=Sarala&display=swap');
+
+@font-face {
+    font-family: ostrich;
+    src: url(fontes\OstrichSans-Black.otf) format(opentype);
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*O * é utilizado para formatar boa parte das tags do HTML, neste ponto anulo todas as pré configurações do navegador*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*o tamanho total da caixa definido, já contém o espaço para padding e border. - NÃO é somado (tamanho + paddin + border)*/
+    text-decoration: none;
+    color:#fff;
+    list-style: none;
+  }
+
+:root {
+    font-size: 100%; /*16px*/
+    scroll-behavior: smooth; /* mudar de seção de mandeira suave*/
+}
+  
+  @media (max-width: 1000px) {
+    :root {
+      font-size: 87,5%; /*14px*/
+    }
+  }
+
+body{
+    font-family: 'roboto', sans-serif;
+    max-width: 100vw;
+    background-color: #000508;
+}
+
+
+/*-----------*/
+
+#header{
+    width: 100vw; /*A propriedade max-width define a extensão máxima de um elemento. Evitando que width se torne maior que o valor especificado por max-width.*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0% 6% 0% 6%;
+    margin: 0;
+}
+
+.container-header{
+    max-width: 100vw;
+    height: 80px;
+    box-sizing: border-box;
+    display: flex; /*Define os elementos filhos como flexíveis, podendo alinha-los da forma desejada*/
+    align-items: center; /*alinha os itens no eixo Y*/
+    justify-content: space-between; /*justifica os itens lado a lado, encostando as pontas nas extremidade da tela e cria espaçamento igual entre os itens no meio*/
+    flex-direction: row; /*ação: fileira*/
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: clamp(0.4rem, 0.8rem + 3vw, 5rem); /*clamp é uma função responsiva, que define os valores mínimo, ideal e máximo, respectivamente*/
+    padding-left: clamp(0.4rem, 0.8rem + 3vw, 5rem);
+    background-color: #000508;
+    border-bottom: 1.5px solid #a0e16312;
+}
+
+.logo-header {
+    width: 200px;
+    border: none;
+}
+
+.menu-header ul {
+    display: flex;
+    gap: 38px;  /*distância entre as âncoras, opções do menu*/
+}
+
+.menu-header ul li a{
+    font-family: 'roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.menu-header ul li a:hover {
+    color: aqua;
+}
+
+.section-intro-js{
+    width: 100vw; /*A propriedade max-width define a extensão máxima de um elemento. Evitando que width se torne maior que o valor especificado por max-width.*/
+    padding: 0% 6% 0% 6%;
+    margin-top: 6%;
+}
+
+.container-intro{
+    max-width: 100vw;
+    height: 500px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    background: url(../imagens/banner.jpg) no-repeat;
+    background-position: right center;
+    background-size: auto 500px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: clamp(0.4rem, 0.8rem + 3vw, 5rem);
+    padding-left: clamp(0.4rem, 0.8rem + 3vw, 5rem);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1.5px solid #a0e16312;
+}
+/*
+@media (max-width: 1200px){
+    
+    .container-intro{
+    background: url(../imagens/banner.jpg) no-repeat;
+    background-position: right bottom;
+    background-size: auto 450px;
+    height: 450px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    }   
+}*/
+
+.container-texto-intro-esq{
+    text-align: left;
+    font-family: 'roboto', sans-serif;
+    max-width: 45%;
+}
+
+.titulo-intro{
+    font-size: clamp(1rem, 1.4rem + 3vw, 2.5rem);
+    font-weight: 1000;
+    margin-bottom: 30px;
+}
+
+.subtitulo-intro{
+    font-size: clamp(0.5em, 0.8em + 3vw, 1.4rem);
+    font-weight: 400;
+}
+
+.botoes-intro {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    margin-top: 50px;
+    gap: 1rem;
+    font-size: 1rem;
+}
+
+.botao-principal {
+    box-sizing: border-box;
+    background-color: #A0E163;
+    border: 0.7px solid #A0E163;
+    color: #000000;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 900;
+}
+
+.botao-secundario {
+    box-sizing: border-box;
+    border: 0.7px solid #fff;
+    color: #ffffff;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+
+}
+
+.botoes-intro li a:hover {
+    background-color: #00CCCC;
+    border: 0.7px solid #00CCCC;
+    color:#000000;
+}
+
+/*------------------------*/
+
+.section-style1{
+    width: 100vw;
+    height: auto;
+    padding: 7% 6% 0% 6%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+.container-style1{
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-right: clamp(0.4rem, 0.8rem + 3vw, 5rem);
+    padding-left: clamp(0.4rem, 0.8rem + 3vw, 5rem);
+    padding-bottom: 3%;
+    border-bottom: 1.5px solid #a0e16312;
+}
+
+.box-esq-style1{
+    width: 55%;
+    left: 0;
+    top: 0;
+    padding-right: 5rem;
+}
+
+.box-esq-style1 h3{
+    font-family: 'ostrich', 'roboto', sans-serif;
+    font-size: 3rem;
+    padding-bottom: 1.5rem;
+
+}
+
+
+.box-esq-style1 p{
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    font-weight: 400;
+    color: #dee7e4;
+}
+
+.box-dir-style1{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 3%;
+
+}
+
+.box-dir-style1-logo{
+    text-align: center;
+}
+.box-dir-style1-logo img{
+    width: 65%;
+    
+}
+
+.item-dir{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+
+    width: 100%;
+    height: 230px;
+    padding-left: 3%;
+    align-items: center;
+    gap: 5%;
+}
+
+.item-dir-reverse {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row-reverse;
+
+    width: 100%;
+    height: 200px;
+    align-items: center;
+    gap: 5%;
+}
+
+.container-circle{
+    height: 400PX;
+    background-color: #00CCCC;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+
+}
+
+.container-circle img{
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+}
+
+.txt-circle{
+    width: 40%;
+    text-align: left;
+}
+
+.txt-circle-reverse{
+    width: 40%;
+    text-align: right;
+}
+
+.txt-circle h4, .txt-circle-reverse h4{
+    font-family: 'ostrich', 'roboto', sans-serif;
+    font-size: 2rem;
+    color: #A0E163;
+    margin-bottom: .5rem;
+}
+.txt-circle p, .txt-circle-reverse p{
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    font-weight: 400;
+    color: #dee7e4;
+}
+
+
+
+
+
+
+
+
+/*------------------------*/
+
+.rodape{
+    background-color: rgb(12, 21, 21);
+    left: 0;
+    bottom:0;
+    width:100%;
+}
+
+.rodape-paragrafo{
+    text-align: center;
+    font-family: 'Sarala', sans-serif;
+    font-size: 13px;
+    color: #ffffff;
+    padding: 5px;
+}
